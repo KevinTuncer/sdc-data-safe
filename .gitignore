@@ -1,0 +1,4 @@
+/.vs
+*.eosproj
+*.code-workspace
+*.wasm

@@ -1,0 +1,217 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "clear",
+            "base": "",
+            "fields": [
+                {
+                    "name": "scope",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "clearlog",
+            "base": "",
+            "fields": [
+                {
+                    "name": "scope",
+                    "type": "name"
+                },
+                {
+                    "name": "user",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "data_log",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "data",
+                    "type": "string"
+                },
+                {
+                    "name": "refBlock",
+                    "type": "uint64"
+                },
+                {
+                    "name": "refTrx",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "permission",
+            "base": "",
+            "fields": [
+                {
+                    "name": "scope",
+                    "type": "name"
+                },
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "storing",
+                    "type": "bool"
+                },
+                {
+                    "name": "reading",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "permission_entry",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "storeData",
+                    "type": "bool"
+                },
+                {
+                    "name": "readData",
+                    "type": "bool"
+                },
+                {
+                    "name": "rPubKey",
+                    "type": "string"
+                },
+                {
+                    "name": "rPubKeyUp",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "removeuser",
+            "base": "",
+            "fields": [
+                {
+                    "name": "scope",
+                    "type": "name"
+                },
+                {
+                    "name": "user",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "setreadkey",
+            "base": "",
+            "fields": [
+                {
+                    "name": "scope",
+                    "type": "name"
+                },
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "readPublicKey",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "update",
+            "base": "",
+            "fields": [
+                {
+                    "name": "scope",
+                    "type": "name"
+                },
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "data",
+                    "type": "string"
+                },
+                {
+                    "name": "refBlock",
+                    "type": "uint64"
+                },
+                {
+                    "name": "refTrx",
+                    "type": "string"
+                },
+                {
+                    "name": "oldRefBlock",
+                    "type": "uint64"
+                },
+                {
+                    "name": "oldRefTrx",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "clear",
+            "type": "clear",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "clearlog",
+            "type": "clearlog",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "permission",
+            "type": "permission",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "removeuser",
+            "type": "removeuser",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setreadkey",
+            "type": "setreadkey",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "update",
+            "type": "update",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "datalogs",
+            "type": "data_log",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "permissions",
+            "type": "permission_entry",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
