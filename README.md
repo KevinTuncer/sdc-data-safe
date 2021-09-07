@@ -37,18 +37,18 @@ Finished
 
 ### Blockchain
 Data Safe can be executed on EOSIO blockchains. This type of blockchain can run as a private, consortium or decentralized blockchain. EOSIO uses delegated proof of stack (sPoS), an eco-friendly and fast alternative to proof of work (PoW). DPoS is usually considered more centralized than PoW, but in medical technology this could be an advantage. By distribution of tokens, certain institutions or authorities for regulation can granted more voting power in the network.
-An overview of the components for handling an EOSIO blockchains can be seen in the picture.
+An overview of the components for handling EOSIO blockchains can be seen in the picture.
 ![Overview EOSIO](./doc/img/eosio.png "Overview EOSIO")
 
 ### Grouping
 The grouping is shown in the following picture. Data Safe is a Contract that runs on a blockchain. By using different contract names, a blockchain can provide several Data Safe contracts. Each Data Safe contract provide several scopes. Each scope can handle several users. Contract, scope and user are defined by EOSIO account names.
 ![Grouping](./doc/img/contract_grouping.png "Grouping with Data Safe")
-For example: A hospital runs a private blockchain and uses the contract name _datasafe_, each operating room has an own scope like _op.room1_, _op.room2_ etc.
-Each medical device with an own network sniffer is a user and has a name like _sniffer1_, _sniffer2_ etc.
+For example: A hospital association runs a private blockchain and uses the contract name _datasafe_. Each hospital in this association has an own scope like _ac.hospital1_, _ac.hospital2_ etc. 
+Each running sniffer has its own user account. If there is only one sniffer for each operating room they may be called _op.room1_, _op.room2_ etc.
 
 ## Storing method
 The data content is uploaded to the blockchain by transactions. In addition to the chaining of blocks, the transactions have an internal chaining, too. Each new transaction refers to the last transaction by this user with the same scope and contract. EOSIO blockchains have the blockchain resource EOSIO RAM for fast queries. The last transaction with its reference is saved in this RAM. An illustration is shown in the picture and see SavAct's SavWeb which uses a similar storing method for decentralised websites on blockchain.
 ![Storing mechanism](./doc/img/contract_references.png "Storing mechanism on blockchain")
 
-## Licence
-The whole project is open source and free to use, see MIT Licence. If you want to work on this project, feel free to contact me or push some improvements.
+# Licence
+The whole project is open source and free to use, see MIT licence. If you want to work on this project, feel free to contact me or push some improvements.
